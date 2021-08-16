@@ -151,7 +151,6 @@ with open(file_to_save, "w") as txt_file:
 
 
     # 6a: Write a for loop to get the county from the county dictionary.
-    print("County Votes:")
     for county_name in county_votes:
 
         # 6b: Retrieve the county vote count.
@@ -159,7 +158,9 @@ with open(file_to_save, "w") as txt_file:
         
         # 6c: Calculate the percentage of votes for the county.
         vote_percentage = float(votes) / float(total_votes) * 100
-        county_results = (f"{county_name}: {vote_percentage:.1f}% ({votes:,})\n")
+        county_results = (
+            f"County Votes:\n"
+            f"{county_name}: {vote_percentage:.1f}% ({votes:,})\n")
 
         # 6d: Print the county results to the terminal.
         print(county_results)
