@@ -8,33 +8,42 @@ Python &amp; VS Code
 Our team was tasked with creating an analysis of election data to present the results of an election for individual candidates as well as provide the result of the overall winner of the election.  The specific request for our team was from a Colorado Board of Elections employee and was to
 1. Calculate the total number of votes cast.
 2. Get a complete list of candidates who received votes.
-3. Calcuate the total number of votes each candidate received.
-4. Calculate the percentage of votes each candidate won.
-5. Determine the winner of the election based upon popular vote.
+3. Calcuate the percentage and the total number of votes each candidate received.
+4. Determine the winner of the election based upon popular vote.
+5. Calcuate the percentage and the total number of votes cast in each county.
+6. Determine which county had the largest number of votes.
 
 ### Resources
 
 Data source: election_results.csv
 Software: Python 3.8.8, Visual Studio Code 1.58.2
 
-## Analysis and Challenges
+## Election-Audit Results
 
 The analysis of the election data show that:
 
-1. There were 'x' votes cast in the election overall
+1. There were 369,711 votes cast in the election overall.
 2. The candidates were:
+    - Charles Casper Stockham
+    - Diana DeGette
+    - Raymon Anthony Doane
 3. The candidate results were:
+    - Charles Casper Stockham received 23% of the vote with 85,213 votes
+    - Diana DeGette received 73.8% of the vote with 272,892 votes
+    - Raymon Anthony Doane received 3.1% of the vote with 11,606 votes
 4. The winner of the election was:
+    - Diana DeGette
+5. The county votes were cast as follows:
+    - Jefferson County cast 10.5% of the total votes with 38,855 votes
+    - Denver County cast 82.8% of the total votes with 306,055 votes
+    - Arapahoe County cast 6.7% of the total votes with 24,801 votes
+6. The county with the largest number of votes cast was:
+    - Denver County
 
 ### Challenges and Difficulties Encountered
 
-Challenges were experienced in refactoring the VBA code to increase the efficiency and run time of this macro.  Nested indices and loops contributed to greater efficiencies but required increased programming time and labor.  However, the usability of this macro for future analyses of larger data sets justified this expenditure.   
+Challenges were experienced in printing both candidate and county data to the .txt file due to duplicate reading and writing blocks in the script. The efficiency of this script can be improved by addressing the multiple instances of writing to the .txt file and combining into a single instance of writing the results.  The usability of this script for future analyses of election data justifies returning to this script to improve efficiency.   
 
-Additionally, if the customer is interested in focusing on DAQO stock, a more granular and longitudinal analysis of the performance of this stock and the company based on products, goals, company values, and business plans is recommended as the fluctuation between positive and negative returns and volume for this stock are highly variable.  With inconsistent data as DAQO is presenting, it is difficult to make a confident recommendation for investment or non-investment.
+## Election-Audit Summary
 
-## Results & Recommendations
-
-In summary, the analysis of the clean energy stock data showed DAQO as a fluctuating stock with inconsistent volumes consistently below the average trading volume of clean energy stocks.  This stock represents a possible risk as a consistent pattern of behavior has not been found.  It is recommended that an increased analysis be conducted beyond two years of data to allow for a more longitudinal analysis of stock price and volume performances in the clean energy sector.  Also, considerations of technological and economic factors impacting price and volume fluctuations should be included to inform interpretations of sector wide return and volume fluctuations. 
-
-The analysis of this data produces the following recommendations to our customer for investing in clean energy stock:  
-*DAQO stock appears unstable and is trading at a lower than average volume.  A recommendation for investment in DAQO cannot be made at this time.  The customer is advised to invest in stocks that show more volume and more consistent positive return, such as demonstrated in the behavior of the ENPH stock over 2017 and 2018. Further analysis as recommended above is suggested if greater evidence is required for investment decisions.*
+In summary, the script developed for analyzing the election data in this project can be expanded upon to apply to larger and more complex election data sets.  As mentioned, the script could be refactored to simplify the writing process to the .txt file.  Additionally, a more granular analysis including a breakdown of candidate results within each county could be informative for future election cycles and future campaign planning.  Lastly, this script could be useful in any kind of democratic process, whether for candidates, legislation, or leadership selection.  
